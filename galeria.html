@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
+
+* {
+ box-sizing: border-box;
+}
+ 
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: #5f0099;;
+}
+
+:root {
+  --magnifier: 6;
+  --gap: 1vmin;
+  --transition: 0.5s;
+}
+  
+.container {
+  width: 80vw;
+  height: 50vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap);
+}
+
+img {
+  --brightness: 0.75;
+  --grayscale: 1;
+  transition: flex var(--transition), filter var(--transition);
+  height: 100%;
+  filter: grayscale(var(--grayscale)) brightness(var(--brightness));
+  object-fit: cover;
+  overflow: hidden;
+  flex: 1;
+}
+
+img:hover {
+  --brightness: 1.15;
+  --grayscale: 0;
+  flex: var(--magnifier);
+}
+    </style>
+</head>
+<body>
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item"> <a class="nav-link" href="index.html" data-scroll-nav="0">Home</a> </li>
+      </ul>
+    
+<div class="container"><img src="https://media.istockphoto.com/id/1299870911/vector/big-win-banner.jpg?s=612x612&w=0&k=20&c=MEHngN8fRZbwHo1L-Sw32ZStupkYMOA7LJkyk2tAQ-g="/><img src="https://www.europeanbusinessreview.com/wp-content/uploads/2021/10/Gambling-Addiction.jpg"/><img src="https://static.foxbusiness.com/foxbusiness.com/content/uploads/2022/01/Winning-jackpot-2.jpg"/>
+</div>
+</body>
+</html>
